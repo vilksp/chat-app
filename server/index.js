@@ -23,7 +23,7 @@ io.on("connection", (socket) => {
 	});
 
 	socket.on("send_message", (data) => {
-		console.log(data);
+		socket.emit("received_message", data);
 	});
 
 	socket.on("disconnect", () => {
